@@ -27,8 +27,8 @@ class login : AppCompatActivity() {
             cnx(email.text.toString(),password.text.toString())
             val btn=intent?.extras?.getString("user").toString()
             if(btn=="livreur"){
-                //  val Liv=Intent(this,Livreur::class.java)
-                //startActivity(Liv)
+                val Liv=Intent(this,MainActivity_Livreur::class.java)
+                startActivity(Liv)
             }
         }
 

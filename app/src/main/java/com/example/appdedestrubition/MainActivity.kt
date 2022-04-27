@@ -12,8 +12,8 @@ class MainActivity : AppCompatActivity() {
         val btn_livreur:Button=findViewById(R.id.livreur)
         btn_livreur.setOnClickListener {
             val Intent_login:Intent=Intent(this,login::class.java)
+            Intent_login.putExtra("user","livreur")
             startActivity(Intent_login)
-            print("hahha")
         }
     }
 }

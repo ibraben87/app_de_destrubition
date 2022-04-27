@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         btn_livreur.setOnClickListener {
             val Intent_login:Intent=Intent(this,login::class.java)
             startActivity(Intent_login)
+            print("hahha")
         }
     }
 }

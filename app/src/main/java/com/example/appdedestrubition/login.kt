@@ -27,27 +27,26 @@ class login : AppCompatActivity() {
             cnx(email.text.toString(),password.text.toString())
             val btn=intent?.extras?.getString("user").toString()
             if(btn=="livreur"){
-               /*val Liv=Intent(this,Livreur::class.java)
-                startActivity(Liv)*/
-
+                val Liv=Intent(this,MainActivity_Livreur::class.java)
+                startActivity(Liv)
             }
         }
 
     }
     fun cnx(email:String,password: String){
         val lis=Response.Listener<String> {
-            response ->  try {
-                val jes=JSONObject(response)
-                val succes:Boolean=jes.getBoolean("succes")
+                response ->  try {
+            val jes=JSONObject(response)
+            val succes:Boolean=jes.getBoolean("succes")
             if (succes){
                 Toast.makeText(this,"cnx",Toast.LENGTH_LONG).show()
             }
             else{
                 Toast.makeText(this,"no cnx",Toast.LENGTH_LONG).show()
             }
-            }catch (e:JSONException){
+        }catch (e:JSONException){
             Toast.makeText(this,"err",Toast.LENGTH_LONG).show()
-            }
+        }
         }
         val send=send(email,password,lis)
         val request:RequestQueue=Volley.newRequestQueue(this)

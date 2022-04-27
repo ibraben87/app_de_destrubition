@@ -26,8 +26,11 @@ class login : AppCompatActivity() {
         cnx.setOnClickListener {
             cnx(email.text.toString(),password.text.toString())
             val btn=intent?.extras?.getString("user").toString()
-            if(btn=="livreur"){
-                val Liv=Intent(this,MainActivity_Livreur::class.java)
+            if(btn=="livreur") {
+                val Liv = Intent(this, MainActivity_Livreur::class.java)
+                startActivity(Liv)
+            }else if (btn=="vendeur"){
+                val Liv = Intent(this, Vendeur::class.java)
                 startActivity(Liv)
             }
         }

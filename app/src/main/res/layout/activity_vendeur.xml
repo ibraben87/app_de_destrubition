@@ -6,4 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".Vendeur">
 
+    <Button
+        android:id="@+id/new_comande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:text="new comande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/new_client"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="new client"
+        app:layout_constraintEnd_toEndOf="@+id/new_comande"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@+id/new_comande"
+        app:layout_constraintTop_toBottomOf="@+id/new_comande" />
+
+    <Button
+        android:id="@+id/valider_cammandes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="valider cammandes"
+        app:layout_constraintEnd_toEndOf="@+id/new_client"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/new_client"
+        app:layout_constraintTop_toBottomOf="@+id/new_client" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

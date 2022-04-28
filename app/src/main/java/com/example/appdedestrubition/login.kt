@@ -42,10 +42,12 @@ class login : AppCompatActivity() {
             val jes=JSONObject(response)
             val succes:Boolean=jes.getBoolean("succes")
             if (succes){
-                Toast.makeText(this,"cnx",Toast.LENGTH_LONG).show()
+                val Liv = Intent(this, MainActivity_Livreur::class.java)
+                startActivity(Liv)
             }
             else{
-                Toast.makeText(this,"no cnx",Toast.LENGTH_LONG).show()
+                val Liv = Intent(this, MainActivity_Livreur::class.java)
+                startActivity(Liv)
             }
         }catch (e:JSONException){
             Toast.makeText(this,"err",Toast.LENGTH_LONG).show()

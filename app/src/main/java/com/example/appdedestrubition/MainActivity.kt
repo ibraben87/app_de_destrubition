@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         }
         btn_vendeur.setOnClickListener {
             val Intent_login:Intent=Intent(this,login::class.java)
-            Intent_login.putExtra("user","livreur")
+            Intent_login.putExtra("user","vendeur")
             startActivity(Intent_login)
         }
     }

@@ -4,6 +4,7 @@ import android.app.DownloadManager
 import android.content.Intent
 import android.net.wifi.p2p.WifiP2pManager
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
@@ -24,7 +25,7 @@ class login : AppCompatActivity() {
         val password:EditText=findViewById(R.id.password)
         val cnx:Button=findViewById(R.id.cnx)
         cnx.setOnClickListener {
-            cnx(email.text.toString(),password.text.toString())
+            log(email.text.toString(),password.text.toString())
             val btn=intent?.extras?.getString("user").toString()
             if(btn=="livreur") {
                 val Liv = Intent(this, MainActivity_Livreur::class.java)
@@ -36,43 +37,16 @@ class login : AppCompatActivity() {
         }
 
     }
-    fun cnx(email:String,password: String){
-        val lis=Response.Listener<String> {
-                response ->  try {
-            val jes=JSONObject(response)
-            val succes:Boolean=jes.getBoolean("succes")
-            if (succes){
-                val Liv = Intent(this, MainActivity_Livreur::class.java)
-                startActivity(Liv)
-            }
-            else{
-                val Liv = Intent(this, MainActivity_Livreur::class.java)
-                startActivity(Liv)
-            }
-        }catch (e:JSONException){
-            Toast.makeText(this,"err",Toast.LENGTH_LONG).show()
-        }
-        }
-        val send=send(email,password,lis)
-        val request:RequestQueue=Volley.newRequestQueue(this)
-        request.add(send)
-    }
-    class send(email: String, password: String, listener: Response.Listener<String>) :
-        StringRequest(
-            Request.Method.POST,
-            "http://192.168.1.41/mini_projet/login.php",
-            listener,
-            null
-        ) {
-        var map:MutableMap<String,String> = HashMap()
-
-        init {
-            map.put("email",email)
-            map.put("password",password)
+    fun log(email:String,password: String){
+        Log.e("avant requete","no prblm")
+        val result=CrearConexionMySQL(this).cnx("SELECT * from societe where login_societe=$email and mdp_societe=$password")
+        Log.e("aapres requete","no prblm")
+        if (result==null){
+            Toast.makeText(applicationContext,"rien a passe",Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(applicationContext,"seccus",Toast.LENGTH_SHORT).show()
         }
 
-        override fun getParams(): MutableMap<String, String>? {
-            return map
-        }
+
     }
 }

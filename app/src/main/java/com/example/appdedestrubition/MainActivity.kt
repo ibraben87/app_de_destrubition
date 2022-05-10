@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val btn_livreur:Button=findViewById(R.id.livreur)
         val btn_vendeur:Button=findViewById(R.id.vendeur)
+        val btn_societe:Button=findViewById(R.id.societe)
         btn_livreur.setOnClickListener {
             val Intent_login:Intent=Intent(this,login::class.java)
             Intent_login.putExtra("user","livreur")
@@ -19,6 +20,11 @@ class MainActivity : AppCompatActivity() {
         btn_vendeur.setOnClickListener {
             val Intent_login:Intent=Intent(this,login::class.java)
             Intent_login.putExtra("user","vendeur")
+            startActivity(Intent_login)
+        }
+        btn_societe.setOnClickListener {
+            val Intent_login:Intent=Intent(this,login::class.java)
+            Intent_login.putExtra("user","societe")
             startActivity(Intent_login)
         }
     }

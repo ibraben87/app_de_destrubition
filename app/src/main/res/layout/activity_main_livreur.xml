@@ -4,29 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="00"
     tools:context=".MainActivity_Livreur">
 
-    <TableLayout
-        android:layout_width="356dp"
-        android:layout_height="672dp"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="16dp" />
+
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/Commandes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="45dp" />
+        android:layout_marginTop="156dp"
+        android:text="Commandes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Commandes_en_attente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="115dp"
-        tools:layout_editor_absoluteY="60dp" />
+        android:layout_marginTop="36dp"
+        android:text="Commandes en attente"
+        app:layout_constraintEnd_toEndOf="@id/Commandes"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="@id/Commandes"
+        app:layout_constraintTop_toBottomOf="@id/Commandes" />
+
+    <Button
+        android:id="@+id/Nos_clients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Nos clients"
+        app:layout_constraintEnd_toEndOf="@id/Commandes_en_attente"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@id/Commandes_en_attente"
+        app:layout_constraintTop_toBottomOf="@id/Commandes_en_attente" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

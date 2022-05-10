@@ -33,6 +33,9 @@ class login : AppCompatActivity() {
             }else if (btn=="vendeur"){
                 val Liv = Intent(this, Vendeur::class.java)
                 startActivity(Liv)
+            }else if (btn=="societe"){
+                val Liv = Intent(this, societe::class.java)
+                startActivity(Liv)
             }
         }
 
@@ -50,3 +53,4 @@ class login : AppCompatActivity() {
 
     }
 }
+

@@ -4,57 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".consulter_commandes">
+    tools:context=".consulter_commandes"
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
+        android:layout_height="200dp"
+    >
         <TextView
             android:id="@+id/text_date_debut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="5dp"
-            android:text="date debut :"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="2dp"
+            android:text="date debut :"/>
         <EditText
             android:id="@+id/date_debut"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:inputType="date"
             app:layout_constraintStart_toEndOf="@id/text_date_debut"
-            app:layout_constraintTop_toTopOf="@id/text_date_debut" />
+            app:layout_constraintTop_toTopOf="@id/text_date_debut"
+            android:layout_marginStart="5dp"
+             />
 
         <TextView
             android:id="@+id/text_date_fin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="5dp"
-            android:text="date fin :"
             app:layout_constraintStart_toEndOf="@id/date_debut"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="8dp"
+            android:text="date fin :"/>
 
         <EditText
             android:id="@+id/date_fin"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:inputType="date"
             app:layout_constraintStart_toEndOf="@id/text_date_fin"
-            app:layout_constraintTop_toTopOf="@id/text_date_fin" />
-
+            app:layout_constraintTop_toTopOf="@id/text_date_fin"
+            android:layout_marginStart="5dp"
+            />
         <com.google.android.material.divider.MaterialDivider
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -65,102 +64,94 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/num_commande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nu"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/nom_client"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nom client"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@id/num_commande"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="8dp"/>
+            <TextView
+                android:id="@+id/total_comande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="total 1125"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"/>
+            <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
-                <TextView
-                    android:id="@+id/num_commande"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Nu"
-                    android:textSize="20dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/nom_client"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
-                    android:text="nom client"
-                    android:textSize="20dp"
-                    app:layout_constraintStart_toEndOf="@id/num_commande"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/total_comande"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="total 1125"
-                    android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.divider.MaterialDivider
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
-
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/item2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item1">
+            app:layout_constraintTop_toBottomOf="@id/item1"
+            android:layout_marginTop="5dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <TextView
                     android:id="@+id/num_commande1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
                     android:text="Nu"
                     android:textSize="20dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"/>
                 <TextView
                     android:id="@+id/nom_client1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="5dp"
                     android:text="nom client"
                     android:textSize="20dp"
                     app:layout_constraintStart_toEndOf="@id/num_commande1"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="8dp"/>
                 <TextView
                     android:id="@+id/total_comande1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="10dp"
                     android:text="total 1125"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"/>
                 <com.google.android.material.divider.MaterialDivider
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

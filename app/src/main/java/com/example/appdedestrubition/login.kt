@@ -17,6 +17,7 @@ import com.android.volley.toolbox.Volley
 import org.json.JSONException
 import org.json.JSONObject
 
+@Suppress("DEPRECATION")
 class login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,9 +43,10 @@ class login : AppCompatActivity() {
     }
     fun log(email:String,password: String){
         Log.e("avant requete","no prblm")
-        val result=CrearConexionMySQL(this).cnx("SELECT * from societe where login_societe=$email and mdp_societe=$password")
+        val conx=CrearConexionMySQL(this)
+        conx.execute("")
         Log.e("aapres requete","no prblm")
-        if (result==null){
+        if (conx.connection==null){
             Toast.makeText(applicationContext,"rien a passe",Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(applicationContext,"seccus",Toast.LENGTH_SHORT).show()

@@ -43,13 +43,12 @@ class login : AppCompatActivity() {
     }
     fun log(email:String,password: String){
         Log.e("avant requete","no prblm")
-        val conx=CrearConexionMySQL(this)
-        conx.execute("")
-        Log.e("aapres requete","no prblm")
+        val conx= CrearConexionMySQL(this)
+        Log.e("apres requete","no prblm")
         if (conx.connection==null){
             Toast.makeText(applicationContext,"rien a passe",Toast.LENGTH_SHORT).show()
         }else{
-            Toast.makeText(applicationContext,"seccus",Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext,"success",Toast.LENGTH_SHORT).show()
         }
 
 

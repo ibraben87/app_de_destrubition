@@ -18,7 +18,7 @@
             android:name=".consulter_commandes"
             android:exported="false" />
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".login"
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity
@@ -32,9 +32,6 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity_Livreur"
-            android:exported="false" />
-        <activity
-            android:name=".login"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

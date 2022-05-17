@@ -28,8 +28,9 @@ class CrearConexionMySQL(context: Context) {
 
 
     init {
-        Log.e("avant_conx" ,"no prblm")
         try {
+            val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+            StrictMode.setThreadPolicy(policy)
             Class.forName("com.mysql.jdbc.Driver")
             connection = DriverManager.getConnection(strConnectionMySQLLocal,userMySQL,passwordMySQL)
             if (connection!=null){
@@ -40,8 +41,6 @@ class CrearConexionMySQL(context: Context) {
         }catch (e:ClassNotFoundException){
             Toast.makeText(context,e.toString(),Toast.LENGTH_SHORT).show()
         }
-
-        Log.e("apres conx" ,"no prblm")
     }
     fun cnx(rqt:String): ResultSet? {
         if (connection==null){

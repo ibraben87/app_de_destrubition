@@ -16,6 +16,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONException
 import org.json.JSONObject
+import java.sql.ResultSet
 
 @Suppress("DEPRECATION")
 class login : AppCompatActivity() {
@@ -25,8 +26,9 @@ class login : AppCompatActivity() {
         val email:EditText=findViewById(R.id.login)
         val password:EditText=findViewById(R.id.password)
         val cnx:Button=findViewById(R.id.cnx)
+        val btn="societe"
         cnx.setOnClickListener {
-            log(email.text.toString(),password.text.toString())
+            log(email.text.toString(),password.text.toString(), btn)
             val btn=intent?.extras?.getString("user").toString()
             if(btn=="livreur") {
                 val Liv = Intent(this, MainActivity_Livreur::class.java)
@@ -41,16 +43,11 @@ class login : AppCompatActivity() {
         }
 
     }
-    fun log(email:String,password: String){
-        Log.e("avant requete","no prblm")
-        val conx= CrearConexionMySQL(this)
-        Log.e("apres requete","no prblm")
-        if (conx.connection==null){
-            Toast.makeText(applicationContext,"rien a passe",Toast.LENGTH_SHORT).show()
-        }else{
-            Toast.makeText(applicationContext,"success",Toast.LENGTH_SHORT).show()
-        }
-
+    fun log(email:String,password: String,btn:String){
+        val resu: ResultSet? =CrearConexionMySQL(this).cnx("SELECT * FROM `$btn")
+        resu?.next()
+        if (resu!=null){Toast.makeText(this,resu.getString("login_societe") ,Toast.LENGTH_SHORT).show()}
+        resu?.toString()
 
     }
 }

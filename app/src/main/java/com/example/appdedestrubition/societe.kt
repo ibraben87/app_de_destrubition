@@ -17,5 +17,10 @@ class societe : AppCompatActivity() {
             val Intent_commande:Intent= Intent(this,consulter_commandes::class.java)
             startActivity(Intent_commande)
         }
+        val newacount:Button=findViewById(R.id.new_acount)
+        newacount.setOnClickListener {
+            val new = Intent(this, new_acount::class.java)
+            startActivity(new)
+        }
     }
 }

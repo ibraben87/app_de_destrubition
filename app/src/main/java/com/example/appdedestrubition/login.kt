@@ -28,8 +28,16 @@ class login : AppCompatActivity() {
         val cnx:Button=findViewById(R.id.cnx)
         val btn="societe"
         cnx.setOnClickListener {
-            log(email.text.toString(),password.text.toString(), btn)
             val btn=intent?.extras?.getString("user").toString()
+            log(email.text.toString(),password.text.toString(), btn)
+
+        }
+
+    }
+    fun log(email:String,password: String,btn:String){
+        val resu: ResultSet? =CrearConexionMySQL(this).cnx("SELECT * FROM `vendeur` WHERE `login_vendeur` = '$email' AND `mdp_vendeur` = '$password'")
+        resu?.last()
+        if (resu?.row!=0){
             if(btn=="livreur") {
                 val Liv = Intent(this, MainActivity_Livreur::class.java)
                 startActivity(Liv)
@@ -40,17 +48,13 @@ class login : AppCompatActivity() {
                 val Liv = Intent(this, societe::class.java)
                 startActivity(Liv)
             }
+        }else{
+            Toast.makeText(this,"try again", Toast.LENGTH_SHORT).show()
         }
-
-    }
-    fun log(email:String,password: String,btn:String){
-        val resu: ResultSet? =CrearConexionMySQL(this).cnx("SELECT * FROM `$btn")
-        resu?.next()
-        if (resu!=null){Toast.makeText(this,resu.getString("login_societe") ,Toast.LENGTH_SHORT).show()}
-        resu?.toString()
-
     }
 }
+
+
 
 
 

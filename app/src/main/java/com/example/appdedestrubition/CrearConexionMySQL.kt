@@ -21,7 +21,7 @@ class CrearConexionMySQL(context: Context) {
 
     //private final String urlGetDBParameters = "zeroDateTimeBehavior=convertToNull&profileSQL=true&useSSL=false";
     //private final String strConnectionMySQLLocal = "jdbc:mysql://127.0.0.1:3306/" + dbName + "?autoReconnect=true&useSSL=false";
-    private var strConnectionMySQLLocal = "jdbc:mysql://192.168.1.37:3306/miniprojet?autoReconnect=true&useSSL=false"
+    private var strConnectionMySQLLocal = "jdbc:mysql://192.168.43.7:3306/miniprojet?autoReconnect=true&useSSL=false"
     //private val strConnectionMySQLWeb = "jdbc:mysql://$hostweb:$port/$dbName?$urlGetDBParameters"
     private val driverClassName = "com.mysql.jdbc.Driver"
     var connection: Connection? = null

@@ -14,10 +14,12 @@
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/appdedestrubition/app/src/main/res/layout/activity_new_commande.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ibrah/AndroidStudioProjects/appdedestrubition/app/src/main/res/layout/activity_vendeur.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1205" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/drawable/more_icon.xml" value="0.153" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout-v21/activity_new_acount.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout-w1240dp/activity_login2.xml" value="0.16331994645247658" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout-w936dp/activity_login2.xml" value="0.18510928961748635" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_consulter_commandes.xml" value="0.264" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_list_de_produits.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_login.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_login2.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_main.xml" value="0.24547101449275363" />
@@ -31,9 +33,9 @@
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/cardview.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/commandes.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/item_commande.xml" value="0.24547101449275363" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_livreur3rd_interface.xml" value="0.2" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_main_livreur.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_new_commande.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/item_produit.xml" value="0.2076923076923077" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/menu/soiciete_menu.xml" value="0.253125" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/menu/top_bar.xml" value="0.253125" />
       </map>
     </option>
   </component>

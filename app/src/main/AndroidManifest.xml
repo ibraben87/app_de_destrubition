@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDeDestrubition">
         <activity
+            android:name=".List_de_produits"
+            android:exported="false" />
+        <activity
             android:name=".new_acount"
             android:exported="false" />
         <activity

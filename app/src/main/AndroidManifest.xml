@@ -23,6 +23,9 @@
             android:exported="false"
             android:label="@string/title_activity_login" />
         <activity
+            android:name=".new_client"
+            android:exported="false" />
+        <activity
             android:name=".societe"
             android:exported="false" />
         <activity

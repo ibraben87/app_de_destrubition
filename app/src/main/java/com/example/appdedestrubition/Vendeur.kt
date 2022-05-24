@@ -14,5 +14,13 @@ class Vendeur : AppCompatActivity() {
             val intent_new_comande:Intent= Intent(this,new_commande::class.java)
             startActivity(intent_new_comande)
         }
+        val btn_new_client  =findViewById<Button>(R.id.new_client)
+        btn_new_client.setOnClickListener {
+            val intent_new_client:Intent= Intent(this,new_commande::class.java)
+            startActivity(intent_new_client)
+        }
+
+        val btn=intent?.extras?.getString("user").toString()
+
+        }
     }
-}

@@ -11,7 +11,7 @@ class new_acount : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_acount)
         val nom:EditText=findViewById(R.id.nom)
-        val prenom:EditText=findViewById(R.id.prenom)
+        val prenom:EditText=findViewById(R.id.nom)
         val email:EditText=findViewById(R.id.login)
         val password:EditText=findViewById(R.id.password)
         val livreur:RadioButton=findViewById(R.id.livreur_radio)

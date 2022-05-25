@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ajouter_produit">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="ajouter produit"
+            android:textColor="#2C2FC6"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.436"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/nom_produit"
+            android:layout_width="250dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="96dp"
+            android:ems="10"
+            android:hint="nom_produit"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/Unite_produit"
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="150dp"
+            android:ems="10"
+            android:hint="Unite par carton"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/prix_categorie1"
+            android:layout_width="250dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:hint="prix categorie 1"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/prix_categorie2"
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="260dp"
+            android:ems="10"
+            android:hint="prix categorie 2"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <EditText
+            android:id="@+id/prix_categorie3"
+            android:layout_width="250dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="310dp"
+            android:ems="10"
+            android:hint="prix categorie 3"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <Button
+            android:id="@+id/submit_produit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="360dp"
+            android:backgroundTint="#2C2FC6"
+            android:onClick="submitbuttonHandler"
+            android:text="SUBMIT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.425"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

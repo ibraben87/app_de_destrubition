@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDeDestrubition">
         <activity
+            android:name=".Update_produit"
+            android:exported="false" />
+        <activity
+            android:name=".Ajouter_produit"
+            android:exported="false" />
+        <activity
             android:name=".List_de_produits"
             android:exported="false" />
         <activity

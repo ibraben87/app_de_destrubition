@@ -16,7 +16,7 @@ class new_client : AppCompatActivity() {
         val phone: EditText =findViewById(R.id.Phone)
         val credit: EditText =findViewById(R.id.credit)
         val categorie: EditText =findViewById(R.id.categorie)
-        val submit: Button =findViewById(R.id.submit)
+        val submit: Button =findViewById(R.id.submit_new_client)
         submit.setOnClickListener {
             CrearConexionMySQL(this).extnoquery("INSERT INTO `client` (`id_client`, `nom_client`, `prenom_client`, `credit`, `localisation`, `Num`, `nom_categorie`) VALUES (NULL, '${nom.text}', '${prenom.text}', '${credit.text}', '${localisation.text}', '${phone.text}', '${categorie.text}');")
         }

@@ -22,5 +22,10 @@ class societe : AppCompatActivity() {
             val new = Intent(this, new_acount::class.java)
             startActivity(new)
         }
+        val list_produit:Button=findViewById(R.id.liste_produit)
+        list_produit.setOnClickListener {
+            val new = Intent(this, List_de_produits::class.java)
+            startActivity(new)
+        }
     }
 }

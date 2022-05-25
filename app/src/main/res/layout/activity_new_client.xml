@@ -7,12 +7,11 @@
     tools:context=".new_client">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submit_new_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="516dp"
         android:backgroundTint="#D500F9"
-        android:onClick="submitbuttonHandler"
         android:text="SUBMIT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
@@ -53,7 +52,6 @@
         android:layout_marginTop="412dp"
         android:ems="10"
         android:hint="categorie"
-        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"

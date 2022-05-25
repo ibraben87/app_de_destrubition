@@ -8,24 +8,24 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class new_commande : AppCompatActivity() {
-    private lateinit var newRecyclerView: RecyclerView
+    /*private lateinit var newRecyclerView: RecyclerView
     private lateinit var newArrayList: ArrayList<products>
     lateinit var imageId: Array<Int>
     lateinit var heading: Array<String>
     lateinit var prix: Array<Double>
-    lateinit var total: Array<Double>
+    lateinit var total: Array<Double>*/
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_commande)
-        imageId = arrayOf(
+        /*imageId = arrayOf(
             R.drawable.cap,
             R.drawable.gari,
             R.drawable.skor,
             R.drawable.soum,
             R.drawable.tart,
-            R.drawable.forex,
+            R.drawable.forex
 
 
             )
@@ -51,15 +51,19 @@ class new_commande : AppCompatActivity() {
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
         newArrayList = arrayListOf<products>()
-        getUserdata()
+        for (i in imageId.indices) {
+            val products = products(imageId[i], heading[i],prix[i],total[i])
+            newArrayList.add(products)
+        }
+        newRecyclerView.adapter = MyAdaptor(newArrayList)*/
     }
 
-    private fun getUserdata() {
+    /*private fun getUserdata() {
         for (i in imageId.indices) {
             val products = products(imageId[i], heading[i],prix[i],total[i])
             newArrayList.add(products)
         }
         newRecyclerView.adapter = MyAdaptor(newArrayList)
-    }
+    }*/
 
 }

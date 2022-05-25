@@ -60,6 +60,7 @@ class login : AppCompatActivity() {
                 CrearConexionMySQL(this).cnx("SELECT * FROM `societe` WHERE `login_societe` = '$email' AND `mdp_societe` = '$password'")
             resu?.last()
             if (resu?.row != 0) {
+                Toast.makeText(this, resu!!.row.toString(),Toast.LENGTH_SHORT).show()
                 val Liv = Intent(this, societe::class.java)
                 startActivity(Liv)
             } else {

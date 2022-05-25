@@ -12,6 +12,8 @@ class new_commande : AppCompatActivity() {
     private lateinit var newArrayList: ArrayList<products>
     lateinit var imageId: Array<Int>
     lateinit var heading: Array<String>
+    lateinit var prix: Array<Double>
+    lateinit var total: Array<Double>
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +38,15 @@ class new_commande : AppCompatActivity() {
             "Forcexpres"
         )
 
+        prix = arrayOf(
+            10.00,12.00,15.00,14.00,17.00,16.00
+        )
+        total= arrayOf(
+            10.00,12.00,15.00,14.00,17.00,16.00
+        )
+
+
+
         newRecyclerView = findViewById(R.id.liste_produit)
         newRecyclerView.layoutManager = LinearLayoutManager(this)
         newRecyclerView.setHasFixedSize(true)
@@ -45,7 +56,7 @@ class new_commande : AppCompatActivity() {
 
     private fun getUserdata() {
         for (i in imageId.indices) {
-            val products = products(imageId[i], heading[i])
+            val products = products(imageId[i], heading[i],prix[i],total[i])
             newArrayList.add(products)
         }
         newRecyclerView.adapter = MyAdaptor(newArrayList)

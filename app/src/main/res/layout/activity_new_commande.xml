@@ -9,12 +9,11 @@
 
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/select_produit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="516dp"
         android:backgroundTint="#D500F9"
-        android:onClick="submitbuttonHandler"
         android:text="SELECT products"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"
@@ -40,25 +39,13 @@
 
 
     <EditText
-        android:id="@+id/num_commande"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:ems="10"
-        android:hint="Num commande"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/prenom"
+        android:id="@+id/nom_client_commande"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
         android:ems="10"
-        android:hint="ID CLIENT"
+        android:hint="NOM CLIENT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"

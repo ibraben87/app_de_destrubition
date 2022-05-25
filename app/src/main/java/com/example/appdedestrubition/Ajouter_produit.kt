@@ -20,7 +20,7 @@ class Ajouter_produit : AppCompatActivity() {
         val submit:Button=findViewById(R.id.submit_produit)
         val con=CrearConexionMySQL(this)
         submit.setOnClickListener {
-            if ((uniteProduit.text==null || nomProduit.text==null || PrixCategorie1.text==null || PrixCategorie2.text==null || PrixCategorie3.text==null)){
+            if ((uniteProduit.text.toString()=="" || nomProduit.text.toString()=="" || PrixCategorie1.text.toString()=="" || PrixCategorie2.text.toString()=="" || PrixCategorie3.text.toString()=="")){
                 Toast.makeText(this,"rempli tout les case svp",Toast.LENGTH_SHORT).show()
             }else{
             con.extnoquery("INSERT INTO `produit` (`num_produit`, `nom_produit`, `photo_produit`, `unite_carton`, `id_societe`) VALUES (NULL, '${nomProduit.text.toString()}', '', '${uniteProduit.text.toString()}', '1');\n")

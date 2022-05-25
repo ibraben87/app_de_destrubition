@@ -7,43 +7,44 @@
     tools:context=".societe">
 
 
-<Button
-    android:id="@+id/cosulter_commande"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:layout_marginTop="125dp"
-    android:text="consulter commande"
-    />
+
+    <Button
+        android:id="@+id/cosulter_commande"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:text="consulter commande"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/envoyer_commandes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cosulter_commande"
         android:layout_marginTop="8dp"
         android:text="envoyer les commandes"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cosulter_commande" />
+
     <Button
         android:id="@+id/new_acount"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/envoyer_commandes"
+        android:layout_marginTop="8dp"
         android:text="new acount"
-        android:layout_marginTop="8dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/envoyer_commandes" />
+
     <Button
         android:id="@+id/liste_produit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="liste des produits"
-        app:layout_constraintTop_toBottomOf="@id/new_acount"
         android:layout_marginTop="8dp"
-        />
+        android:text="liste des produits"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/new_acount" />
 </androidx.constraintlayout.widget.ConstraintLayout>

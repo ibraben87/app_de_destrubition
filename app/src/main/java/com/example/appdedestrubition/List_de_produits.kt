@@ -3,6 +3,7 @@ package com.example.appdedestrubition
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -18,6 +19,8 @@ class List_de_produits : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list_de_produits)
+        Toast.makeText(this,"liste produit",Toast.LENGTH_SHORT).show()
+
         val ListView_produit:RecyclerView=findViewById(R.id.listView_produit)
         val produits=ArrayList<modelProduit>()
         val con=CrearConexionMySQL(this)

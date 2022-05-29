@@ -1,6 +1,7 @@
 package com.example.appdedestrubition.addpters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,17 +10,19 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appdedestrubition.R
+import com.example.appdedestrubition.Update_produit
 import com.example.appdedestrubition.model.modelProduit
 
 class AdappterListProduits(produits:ArrayList<modelProduit>
 ): RecyclerView.Adapter<AdappterListProduits.ViewHolder>() {
     val Produits=produits
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View,var produit_selc:modelProduit?=null): RecyclerView.ViewHolder(itemView) {
 
         init {
             itemView.setOnClickListener {
-                Toast.makeText(itemView.context,"rana metfahmin",Toast.LENGTH_SHORT).show()
-
+                val updateProduitIntent=Intent(itemView.context,Update_produit::class.java)
+                updateProduitIntent.putExtra("nom", produit_selc?.nom_produi)
+                itemView.context.startActivity(updateProduitIntent)
             }
         }
 
@@ -44,5 +47,6 @@ class AdappterListProduits(produits:ArrayList<modelProduit>
         holder.imageProdui.setImageResource(data.image_produit)
         holder.uniteProduit.text=data.unite.toString()
         holder.prixProduit.text=data.prix.toString()
+        holder.produit_selc=data
     }
 }

@@ -20,7 +20,7 @@ class User(var id: String, var name: String) {
              return R.drawable.usericon0
          }*/
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+   /* override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spinner_client)
         val ListSpinnerClient: RecyclerView = findViewById(R.id.list_spinner_client)
@@ -35,7 +35,7 @@ class User(var id: String, var name: String) {
             prix=prix_cat.getDouble("prix")
             val pro= modelProduit(res!!.getString("nom_produit"),R.drawable.bien_remplir_une_fiche_produit,res.getInt("unite_carton"),prix)
             produits.add(pro)
-        }while (res?.isLast == false)
+        }while (res?.isLast == false)*/
 
 
 

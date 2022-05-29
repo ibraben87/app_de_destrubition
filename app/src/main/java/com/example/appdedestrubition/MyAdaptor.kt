@@ -26,7 +26,6 @@ return productsList.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
        val currentItem = productsList [position]
-        holder.images.setImageResource(currentItem.images)
         holder.txt1.text = currentItem.nom_produit
         holder.txt2.text = currentItem.prix.toString()
         holder.txt3.text = currentItem.total.toString()
@@ -34,7 +33,6 @@ return productsList.size
     }
     class MyViewHolder(itemView : View):RecyclerView.ViewHolder(itemView){
 
-        val images : ImageView =itemView.findViewById(R.id.images)
         val txt1 :TextView =itemView.findViewById(R.id.nom_produit)
         val txt2 :TextView =itemView.findViewById(R.id.prix)
         val txt3 :TextView =itemView.findViewById(R.id.total)

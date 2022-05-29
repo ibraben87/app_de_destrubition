@@ -6,26 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".List_de_produits">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/top"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="liste de produits"
-            app:menu="@menu/top_bar"
-            app:navigationIcon="@drawable/more_icon"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            />
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView_produit"
         android:layout_width="match_parent"

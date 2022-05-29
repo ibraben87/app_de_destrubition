@@ -19,16 +19,16 @@
             android:name=".select_products"
             android:exported="false" />
         <activity
-            android:name=".SpinnerAdaptor"
-            android:exported="false" />
-        <activity
             android:name=".User"
             android:exported="false" />
         <activity
-            android:name=".Userr"
+            android:name=".spinner_client"
             android:exported="false" />
         <activity
-            android:name=".spinner_client"
+            android:name=".List_vendeur_livreur"
+            android:exported="false" />
+        <activity
+            android:name=".Liste_des_clients"
             android:exported="false" />
         <activity
             android:name=".Update_produit"

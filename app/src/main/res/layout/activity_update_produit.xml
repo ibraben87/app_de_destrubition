@@ -55,7 +55,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Update_prix_categorie2"
+        android:id="@+id/update_prix_categorie2"
         android:layout_width="250dp"
         android:layout_height="44dp"
         android:layout_marginTop="260dp"

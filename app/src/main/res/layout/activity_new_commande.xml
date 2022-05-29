@@ -7,89 +7,31 @@
     tools:context=".new_commande"
     android:orientation="horizontal">
 
-
-    <Button
-        android:id="@+id/select_produit"
+    <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="516dp"
-        android:backgroundTint="#D500F9"
-        android:text="SELECT products"
+        android:layout_marginTop="28dp"
+        android:text="NEW COMMANDE"
+        android:textColor="#D500F9"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /><![CDATA[
-        >
-
-    ]]>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinner_client"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        app:layout_constraintEnd_toEndOf="@+id/nom_client_commande"
-        tools:layout_editor_absoluteY="164dp" />
-
-    <TextView
-            android:id="@+id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:text="NEW COMMANDE"
-            android:textColor="#D500F9"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.436"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/menu_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/show_menu"
-        tools:layout_editor_absoluteX="47dp"
-        tools:layout_editor_absoluteY="300dp" />
-    <menu >
-        <item android:id="@+id/option_1"
-            android:title="option_1" />
-        <item android:id="@+id/option_2"
-            android:title="option_2" />
-        <item android:id="@+id/option_3"
-            android:title="option_3" />
-    </menu>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/menu"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="NOM CLIENT"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="94dp">
-
-        <AutoCompleteTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
-    <EditText
-        android:id="@+id/nom_client_commande"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="49dp"
         android:layout_marginTop="164dp"
-        android:ems="10"
-        android:hint="NOM CLIENT"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <EditText
         android:id="@+id/date_commande"
@@ -103,6 +45,30 @@
         app:layout_constraintHorizontal_bias="0.184"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/select_produit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="516dp"
+        android:backgroundTint="#D500F9"
+        android:text="SELECT products"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

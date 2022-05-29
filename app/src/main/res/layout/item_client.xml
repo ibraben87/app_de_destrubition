@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/id_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nu"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"/>
+        <TextView
+            android:id="@+id/item_nom_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom client"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/id_client"
+            app:layout_constraintTop_toTopOf="@id/id_client"
+            android:layout_marginStart="8dp" />
+        <TextView
+            android:id="@+id/num_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="num client"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/id_client"
+            app:layout_constraintEnd_toEndOf="@id/item_nom_client"
+            app:layout_constraintTop_toBottomOf="@id/item_nom_client"
+            android:layout_marginTop="4dp"
+            />
+        <TextView
+            android:id="@+id/localisation_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="localisation"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/num_client"
+            app:layout_constraintEnd_toEndOf="@id/num_client"
+            app:layout_constraintTop_toBottomOf="@id/num_client"
+            android:layout_marginTop="4dp"
+            />
+        <TextView
+            android:id="@+id/credit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="credit"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/id_client"
+            app:layout_constraintBottom_toBottomOf="@id/localisation_client"
+            android:layout_marginEnd="5dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

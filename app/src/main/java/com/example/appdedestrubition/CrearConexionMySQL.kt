@@ -12,12 +12,17 @@ import java.sql.SQLException
 
 class CrearConexionMySQL(context: Context) {
     val con=context
-    private val userMySQL = "sql11493706"
-    private val passwordMySQL:String = "fdfWHJHgHR"
-    private val hostweb = "sql11.freemysqlhosting.net"
+    private val userMySQL = "sql11495453"
+    private val passwordMySQL:String = "YGQrKk9YMJ"
+    private val hostweb = "sql11.freesqldatabase.com"
+//    private val userMySQL = "a8781d_ibrahi"
+//    private val passwordMySQL:String = "r43g@R22P@_ZdHx"
+//    private val hostweb = "MYSQL8001.site4now.net"
     private val host = "192.168.1.37"
     private val port = "3306"
-    private val dbName = "sql11493706"
+    //private val dbName = "db_a8781d_ibrahi"
+    private val dbName = "sql11495453"
+
 
     //private final String urlGetDBParameters = "zeroDateTimeBehavior=convertToNull&profileSQL=true&useSSL=false";
     //private final String strConnectionMySQLLocal = "jdbc:mysql://127.0.0.1:3306/" + dbName + "?autoReconnect=true&useSSL=false";
@@ -35,6 +40,8 @@ class CrearConexionMySQL(context: Context) {
             connection = DriverManager.getConnection(strConnectionMySQLWeb,userMySQL,passwordMySQL)
             if (connection!=null){
                 Toast.makeText(con,"ro7 dir dodo ro7",Toast.LENGTH_SHORT).show()
+            }else{
+                Toast.makeText(con,"yes we have problem here",Toast.LENGTH_SHORT).show()
             }
         }catch (e:SQLException){
             Toast.makeText(context,e.toString(),Toast.LENGTH_SHORT).show()

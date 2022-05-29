@@ -2,6 +2,7 @@ package com.example.appdedestrubition
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
@@ -22,5 +23,8 @@ class new_client : AppCompatActivity() {
         }
 
 
+
     }
+
+
 }

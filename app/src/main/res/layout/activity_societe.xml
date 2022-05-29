@@ -7,7 +7,6 @@
     tools:context=".societe">
 
 
-
     <Button
         android:id="@+id/cosulter_commande"
         android:layout_width="wrap_content"
@@ -47,4 +46,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/new_acount" />
+
+    <Button
+        android:id="@+id/liste_clients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="liste des clients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/liste_produit" />
+
+    <Button
+        android:id="@+id/liste_vendeur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="liste des vendeur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/liste_clients" />
+
+    <Button
+        android:id="@+id/liste_livreur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="liste des livreur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/liste_vendeur" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

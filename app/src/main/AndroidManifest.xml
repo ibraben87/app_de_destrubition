@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDeDestrubition">
         <activity
+            android:name=".CommandesDistribuees"
+            android:exported="false" />
+        <activity
+            android:name=".CommandesEnCours"
+            android:exported="false" />
+        <activity
             android:name=".produits_selectionnes"
             android:exported="false" />
         <activity

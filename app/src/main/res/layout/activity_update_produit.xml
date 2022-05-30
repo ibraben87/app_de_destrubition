@@ -4,16 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Update_produit">
+    tools:context=".Update_produit"
+    android:background="@drawable/back_ground"
+    >
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="modefier produit"
-        android:textColor="#2C2FC6"
-        android:textSize="28sp"
+        android:text="MODIFIER PRODUIT"
+        android:typeface="serif"
+        android:textColor="#F3B0B8"
+        android:textStyle="bold"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,23 +38,25 @@
         android:id="@+id/update_Unite_produit"
         android:layout_width="250dp"
         android:layout_height="44dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="152dp"
         android:ems="10"
         android:hint="Unite par carton"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/update_prix_categorie1"
         android:layout_width="250dp"
         android:layout_height="46dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="212dp"
         android:ems="10"
         android:hint="prix categorie 1"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,37 +64,43 @@
         android:id="@+id/update_prix_categorie2"
         android:layout_width="250dp"
         android:layout_height="44dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="272dp"
         android:ems="10"
         android:hint="prix categorie 2"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/update_prix_categorie3"
         android:layout_width="250dp"
         android:layout_height="44dp"
-        android:layout_marginTop="310dp"
+        android:layout_marginTop="340dp"
         android:ems="10"
         android:hint="prix categorie 3"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-    <Button
-        android:id="@+id/update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="360dp"
-        android:backgroundTint="#2C2FC6"
-        android:onClick="submitbuttonHandler"
-        android:text="update"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/update"
+
+        android:layout_width="130dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#C57791"
+        android:onClick="submitbuttonHandler"
+        android:text="update"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

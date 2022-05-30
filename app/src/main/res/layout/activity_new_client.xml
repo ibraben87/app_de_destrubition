@@ -4,19 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".new_client">
+    tools:context=".new_client"
+    android:background="@drawable/back_ground"
+    >
 
     <Button
         android:id="@+id/submit_new_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="516dp"
-        android:backgroundTint="#D500F9"
+        android:backgroundTint="#C57791"
         android:text="SUBMIT"
+        android:textColor="#C9D3F8"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
 
     <EditText
         android:id="@+id/addresse"
@@ -51,9 +58,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="New client"
-        android:textColor="#D500F9"
-        android:textSize="28sp"
+        android:typeface="serif"
+        android:textColor="#F3B0B8"
         android:textStyle="bold"
+        android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"

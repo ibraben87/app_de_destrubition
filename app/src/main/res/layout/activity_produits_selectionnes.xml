@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".produits_selectionnes">
+    tools:context=".produits_selectionnes"
+    android:background="@drawable/back_ground"
+    >
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/produit_commande"
         android:layout_width="match_parent"

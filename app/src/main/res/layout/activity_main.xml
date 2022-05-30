@@ -11,11 +11,15 @@
 
     <Button
         android:id="@+id/livreur"
-        android:layout_width="150dp"
+        android:layout_width="250dp"
         android:layout_height="65dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="180dp"
         android:text="Livreur"
+        android:textSize="32dp"
+        android:backgroundTint="#b0f2b6"
+
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,16 +27,24 @@
         android:id="@+id/vendeur"
 
         android:text="vendeur"
-        android:layout_width="150dp"
+        android:layout_width="250dp"
+        android:textSize="32dp"
+        android:backgroundTint="#b0f2b6"
+
+        android:textStyle="bold"
         android:layout_height="65dp"
         app:layout_constraintStart_toStartOf="@+id/livreur"
         app:layout_constraintTop_toBottomOf="@id/livreur"
         android:layout_marginTop="50dp"/>
     <Button
         android:id="@+id/societe"
-        android:layout_width="150dp"
+        android:layout_width="250dp"
+        android:textSize="32dp"
+        android:textStyle="bold"
         android:layout_height="65dp"
         android:text="@string/societe"
+        android:backgroundTint="#b0f2b6"
+
         app:layout_constraintStart_toStartOf="@id/livreur"
         app:layout_constraintTop_toBottomOf="@id/vendeur"
         android:layout_marginTop="50dp"

@@ -10,9 +10,12 @@
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout-v21/activity_main_livreur.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_ajouter_produit.xml" value="0.21829710144927536" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_consulter_commandes.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_envoyer_les_commandes.xml" value="0.2246376811594203" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_list_de_produits.xml" value="0.21829710144927536" />
+        <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_list_vendeur_livreur.xml" value="0.2246376811594203" />
+        <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_liste_des_clients.xml" value="0.2246376811594203" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_livreur3rd_interface.xml" value="0.21829710144927536" />
-        <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_login.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_main_livreur.xml" value="0.2346014492753623" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_new_acount.xml" value="0.2346014492753623" />
@@ -35,6 +38,7 @@
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/item_commande.xml" value="0.2" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/item_prodect.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/item_produit.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/item_ven_liv.xml" value="0.2246376811594203" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/produits.xml" value="0.21829710144927536" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/row_checkbox.xml" value="0.2" />
         <entry key="..\:/Users/N'Tic-InFormaTiQue/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/row_values.xml" value="0.16757246376811594" />

@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Liste_des_clients">
+    tools:context=".Liste_des_clients"
+    android:background="@drawable/back_ground"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView_client"

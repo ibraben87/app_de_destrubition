@@ -40,9 +40,9 @@ class consulter_commandes : AppCompatActivity() {
             val pro= modelProduit(res!!.getString("nom_produit"),R.drawable.bien_remplir_une_fiche_produit,res.getInt("unite_carton"),prix)
             commandes.add(pro)
         }while (res?.isLast == false)
-        commandes.add(modelProduit("com1",R.drawable.bien_remplir_une_fiche_produit,48, 15.0))
-       commandes.add(modelProduit("com2",R.drawable.bien_remplir_une_fiche_produit,48, 16.0))
-        commandes.add(modelProduit("com3",R.drawable.bien_remplir_une_fiche_produit,48, 17.0))
+        commandes.add(modelConsCommande("com1",R.drawable.bien_remplir_une_fiche_produit,48, 15.0))
+       commandes.add(modelConsCommande("com2",R.drawable.bien_remplir_une_fiche_produit,48, 16.0))
+        commandes.add(modelConsCommande("com3",R.drawable.bien_remplir_une_fiche_produit,48, 17.0))
         con_commande.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         con_commande.adapter= AdapterConsulterCommande(commandes)
 

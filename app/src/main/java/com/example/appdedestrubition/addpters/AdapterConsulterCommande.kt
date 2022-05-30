@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Update
 import com.example.appdedestrubition.R
 import com.example.appdedestrubition.Update_produit
 import com.example.appdedestrubition.model.modelConsCommande

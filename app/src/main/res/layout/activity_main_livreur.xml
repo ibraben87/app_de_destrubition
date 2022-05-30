@@ -4,16 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
     tools:context=".MainActivity_Livreur">
+    <TextView
+        android:id="@+id/page_livreur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="LIVREUR"
+        android:textColor="#FFF"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
         android:id="@+id/Commandes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        android:text="Commandes en cours"
+        android:layout_marginTop="176dp"
+        android:backgroundTint="#bdd7e2"
+        android:text="Commandes en attente"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,10 +37,12 @@
         android:id="@+id/Commandes_en_attente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Commandes distribuées"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="#bdd7e2"
+        android:text="Commandes en cours"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/Commandes"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@id/Commandes"
         app:layout_constraintTop_toBottomOf="@id/Commandes" />
 
@@ -32,10 +50,12 @@
         android:id="@+id/Nos_clients"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Liste clients"
+        android:layout_marginTop="112dp"
+        android:backgroundTint="#bdd7e2"
+        android:text="Commandes distribuées"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/Commandes_en_attente"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="@id/Commandes_en_attente"
         app:layout_constraintTop_toBottomOf="@id/Commandes_en_attente" />
 

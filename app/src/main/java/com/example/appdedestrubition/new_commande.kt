@@ -32,6 +32,7 @@ class new_commande : AppCompatActivity() {
         val date_commande: EditText = findViewById(R.id.date_commande)
         val date = currentDate.toString()
         val con = CrearConexionMySQL(this)
+        val idVendeur= intent.extras!!.getInt("idVendeur")
         date_commande.setText(date)
         spinner = findViewById(R.id.spinner_client) as Spinner
         val options = ArrayList<String>()
@@ -59,8 +60,8 @@ class new_commande : AppCompatActivity() {
             var rse = con.cnx("SELECT * FROM `client` WHERE `nom_client` LIKE '$nom_client'")
             rse?.next()
             val  categorie= rse!!.getString("nom_categorie")
-            con.extnoquery("INSERT INTO `commande` (`num_commande`, `date_commande`, `date_livre`, `total`, `id_client`) VALUES (NULL, '$date', '', '', '${rse?.getInt("id_client")}');")
-            rse=con.cnx("SELECT * FROM `commande` WHERE `date_commande` = '$date'\n")
+            con.extnoquery("INSERT INTO `commande` (`num_commande`, `date_commande`, `date_livre`, `total`, `id_client`, `id_vendeur`, `id_livreur`, `versement`) VALUES (NULL, '$date', '', '', '${rse.getInt("id_client")}', '$idVendeur', NULL, '');")
+            rse=con.cnx("SELECT * FROM `commande` WHERE `date_commande` = '$date'")
             rse!!.next()
             val Intent_prd = Intent(this, select_products::class.java)
             Intent_prd.putExtra("num_commande", rse!!.getInt("num_commande"))

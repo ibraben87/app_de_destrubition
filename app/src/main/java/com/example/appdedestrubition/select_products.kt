@@ -27,16 +27,13 @@ class select_products : AppCompatActivity() {
             res?.next()
             val prix_catt: ResultSet? =con.cnx("SELECT * FROM `contient` WHERE `num_produit` = ${res!!.getInt("num_produit")} AND `nom_categorie` = '$categorie'")
             prix_catt!!.last()
+            if(prix_catt.row!=0){
             var prix:Double=0.000
             prix=prix_catt.getDouble("prix")
             val pro= modelProduit(res!!.getString("nom_produit"),R.drawable.bien_remplir_une_fiche_produit,res.getInt("unite_carton"),prix)
-            produits.add(pro)
+            produits.add(pro)}
         }while (res?.isLast == false)
         ListView_produit.layoutManager=LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         ListView_produit.adapter=AdappterSelectPr(produits,num_commande)
     }
-
-
-
-
 }

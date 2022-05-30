@@ -1,8 +1,11 @@
 package com.example.appdedestrubition
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.widget.EditText
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -53,15 +56,38 @@ class produits_selectionnes : AppCompatActivity() {
         val ajouterProduit: FloatingActionButton = findViewById(R.id.add_product)
         ajouterProduit.setOnClickListener {
             val ajouterPro = Intent(this, select_products::class.java)
+            ajouterPro.putExtra("categorie",detail_client.getString("nom_categorie"))
+            ajouterPro.putExtra("num_commande",numCommande)
             startActivity(ajouterPro)
         }
         val valide: FloatingActionButton = findViewById(R.id.valide)
         valide.setOnClickListener {
+            Toast.makeText(this, "cv1", Toast.LENGTH_SHORT).show()
+
             var totale_commande = 0.0
-            for (i in 0..liste_produit_commande.size) {
-                totale_commande = +liste_produit_commande[i].total
+            var i = 0
+            while (i < liste_produit_commande.size) {
+                totale_commande = totale_commande + liste_produit_commande[i].total
+                i = i + 1
             }
-            con.extnoquery("UPDATE `commande` SET `total` = '$totale_commande' WHERE `commande`.`num_commande` = $numCommande;")
+            Toast.makeText(this, "cv2", Toast.LENGTH_SHORT).show()
+
+            val builder = AlertDialog.Builder(this)
+            Toast.makeText(this, "cv3", Toast.LENGTH_SHORT).show()
+
+            with(builder) {
+                setTitle("total:$totale_commande")
+                setPositiveButton("ok") { dialog, wich ->
+                    val Intent_consulter_commande: Intent =
+                        Intent(builder.context, consulter_commandes::class.java)
+                    startActivity(Intent_consulter_commande)
+                    con.extnoquery("UPDATE `commande` SET `total` = '$totale_commande' WHERE `commande`.`num_commande` = $numCommande;")
+                }
+                setNegativeButton("cancel") { dialog, wich ->
+                }
+                show()
+            }
+            Toast.makeText(this, "cv4", Toast.LENGTH_SHORT).show()
 
         }
 

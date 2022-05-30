@@ -19,30 +19,27 @@ class consulter_commandes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_consulter_commandes)
-       /* val nom: EditText =findViewById(R.id.nom_client1)
-        val num: EditText =findViewById(R.id.num_commande1)
+       /*val nom: EditText =findViewById(R.id.nom_client1)
+        *val num: EditText =findViewById(R.id.num_commande1)
         val total: EditText =findViewById(R.id.total_comande1)*/
 
 
 
         Toast.makeText(this,"liste commandes",Toast.LENGTH_SHORT).show()
 
-        val con_commande: RecyclerView =findViewById(R.id.con_commmande)
+        val con_commande: RecyclerView =findViewById(R.id.liste_consulter_commande)
         val commandes=ArrayList<modelConsCommande>()
         val con=CrearConexionMySQL(this)
         val res: ResultSet? = con.cnx("SELECT * FROM `commande`")
         do {
             res?.next()
-            val prix_cat: ResultSet? =con.cnx("SELECT * FROM `contient` WHERE `num_produit` = ${res!!.getInt("num_produit")} AND `nom_categorie` = 'categorie 3'")
-            prix_cat!!.last()
-            var prix:Double=0.000
-            prix=prix_cat.getDouble("prix")
-            val pro= modelProduit(res!!.getString("nom_produit"),R.drawable.bien_remplir_une_fiche_produit,res.getInt("unite_carton"),prix)
-            commandes.add(pro)
+            if (res!!.getDouble("total")!=0.0){
+            val nom_client: ResultSet? =con.cnx("SELECT * FROM `client` WHERE `id_client` = ${res!!.getInt("id_client")}")
+            nom_client!!.last()
+               val model= modelConsCommande(res.getInt("num_commande"),nom_client.getString("nom_client"),res.getDouble("total") )
+            commandes.add(model)
+            }
         }while (res?.isLast == false)
-        commandes.add(modelConsCommande("com1",R.drawable.bien_remplir_une_fiche_produit,48, 15.0))
-       commandes.add(modelConsCommande("com2",R.drawable.bien_remplir_une_fiche_produit,48, 16.0))
-        commandes.add(modelConsCommande("com3",R.drawable.bien_remplir_une_fiche_produit,48, 17.0))
         con_commande.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         con_commande.adapter= AdapterConsulterCommande(commandes)
 

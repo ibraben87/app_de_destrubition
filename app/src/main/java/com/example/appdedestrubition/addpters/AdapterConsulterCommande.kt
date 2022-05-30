@@ -8,11 +8,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Update
 import com.example.appdedestrubition.R
 import com.example.appdedestrubition.Update_produit
 import com.example.appdedestrubition.model.modelConsCommande
 import com.example.appdedestrubition.model.modelProduit
+import com.example.appdedestrubition.produits_selectionnes
 
 class AdapterConsulterCommande (commandes:ArrayList<modelConsCommande>
 ): RecyclerView.Adapter<AdapterConsulterCommande.ViewHolder>() {
@@ -21,9 +21,9 @@ class AdapterConsulterCommande (commandes:ArrayList<modelConsCommande>
 
         init {
             itemView.setOnClickListener {
-                val updateComIntent=Intent(itemView.context,Update::class.java)
-                updateComIntent.putExtra("nom", com_selc?.nom_client)
-                itemView.context.startActivity(updateComIntent)
+                val Intent_commande=Intent(itemView.context, produits_selectionnes::class.java)
+                Intent_commande.putExtra("numerota3lacommande", com_selc!!.num_commande)
+                itemView.context.startActivity(Intent_commande)
             }
         }
 
@@ -45,6 +45,6 @@ class AdapterConsulterCommande (commandes:ArrayList<modelConsCommande>
         holder.nomClient.text= data.nom_client
         holder.numCom.text=data.num_commande.toString()
         holder.total1.text=data.total.toString()
-
+        holder.com_selc=data
     }
 }

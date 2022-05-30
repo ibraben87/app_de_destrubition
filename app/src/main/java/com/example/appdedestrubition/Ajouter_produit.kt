@@ -23,7 +23,7 @@ class Ajouter_produit : AppCompatActivity() {
             if ((uniteProduit.text.toString()=="" || nomProduit.text.toString()=="" || PrixCategorie1.text.toString()=="" || PrixCategorie2.text.toString()=="" || PrixCategorie3.text.toString()=="")){
                 Toast.makeText(this,"rempli tout les case svp",Toast.LENGTH_SHORT).show()
             }else{
-            con.extnoquery("INSERT INTO `produit` (`num_produit`, `nom_produit`, `photo_produit`, `unite_carton`, `id_societe`) VALUES (NULL, '${nomProduit.text.toString()}', '', '${uniteProduit.text.toString()}', '1');\n")
+            con.extnoquery("INSERT INTO `produit` (`num_produit`, `nom_produit`, `unite_carton`, `id_societe`) VALUES (NULL, '${nomProduit.text.toString()}', '${uniteProduit.text.toString()}', '1');")
             val res: ResultSet? =CrearConexionMySQL(this).cnx("SELECT `num_produit` FROM `produit` WHERE `nom_produit` = '${nomProduit.text.toString()}'")
             res?.last()
             val idPRo=res?.getInt("num_produit")

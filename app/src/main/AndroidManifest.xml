@@ -13,16 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDeDestrubition">
         <activity
+            android:name=".EnvoyerLesCommandes"
+            android:exported="false" />
+        <activity
             android:name=".produits_selectionnes"
             android:exported="false" />
         <activity
             android:name=".select_products"
-            android:exported="false" />
-        <activity
-            android:name=".User"
-            android:exported="false" />
-        <activity
-            android:name=".spinner_client"
             android:exported="false" />
         <activity
             android:name=".List_vendeur_livreur"

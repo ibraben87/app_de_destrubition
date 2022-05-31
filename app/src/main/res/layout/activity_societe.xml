@@ -31,7 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="236dp"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="consulter commande"
         android:textColor="#1C1061"
         android:textStyle="bold"
@@ -60,7 +60,7 @@
         android:id="@+id/new_acount"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:textStyle="bold"
         android:text="new acount"
         android:textColor="#1C1061"
@@ -74,7 +74,7 @@
         android:id="@+id/liste_produit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="liste des produits"
         android:textColor="#1C1061"
         android:textStyle="bold"
@@ -89,7 +89,7 @@
         android:id="@+id/liste_clients"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="liste des clients"
         android:textColor="#1C1061"
         android:textStyle="bold"
@@ -104,7 +104,7 @@
         android:id="@+id/liste_vendeur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="liste des vendeur"
         android:textColor="#1C1061"
         android:textStyle="bold"
@@ -120,7 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="liste des livreur"
         android:textColor="#1C1061"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,6 +129,22 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="415dp"
         />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/icons8_soci_t__50__1_"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/icons8_soci_t__50__1_"
+        tools:layout_editor_absoluteX="336dp"
+        tools:layout_editor_absoluteY="30dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

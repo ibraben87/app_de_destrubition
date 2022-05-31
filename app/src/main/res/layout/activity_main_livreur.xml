@@ -6,27 +6,29 @@
     android:layout_height="match_parent"
     android:background="@drawable/back_ground"
     tools:context=".MainActivity_Livreur">
+
+
     <TextView
         android:id="@+id/page_livreur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="LIVREUR"
         android:textColor="#F3B0B8"
         android:textSize="55sp"
         android:textStyle="bold"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <Button
         android:id="@+id/Commandes"
-        android:layout_width="248dp"
-        android:layout_height="79dp"
+        android:layout_width="240dp"
+        android:layout_height="74dp"
         android:layout_marginTop="204dp"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="Commandes en cour"
         android:textColor="#1C1061"
         android:textStyle="bold"
@@ -37,10 +39,10 @@
 
     <Button
         android:id="@+id/Commandes_en_attente"
-        android:layout_width="236dp"
+        android:layout_width="240dp"
         android:layout_height="74dp"
         android:layout_marginTop="100dp"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="Commandes en distribuées"
         android:textColor="#1C1061"
         android:textStyle="bold"
@@ -51,10 +53,10 @@
 
     <Button
         android:id="@+id/Nos_clients"
-        android:layout_width="241dp"
-        android:layout_height="76dp"
+        android:layout_width="240dp"
+        android:layout_height="74dp"
         android:layout_marginTop="84dp"
-        android:backgroundTint="#bdd7e2"
+        android:backgroundTint="#F2DAC2D2"
         android:text="Liste client"
         android:textColor="#1C1061"
         android:textStyle="bold"
@@ -62,5 +64,21 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@id/Commandes_en_attente"
         app:layout_constraintTop_toBottomOf="@id/Commandes_en_attente" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/icons8_transport_logistique_de_livraison_cargo_colis_bus_service_27_64"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="48dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/icons8_transport_logistique_de_livraison_cargo_colis_bus_service_27_64"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="38dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

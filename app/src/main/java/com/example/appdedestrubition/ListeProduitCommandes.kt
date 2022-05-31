@@ -12,16 +12,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appdedestrubition.addpters.AddapterProduitsSlectionne
 import com.example.appdedestrubition.model.modelItemCommande
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
-class produits_selectionnes : AppCompatActivity() {
+class ListeProduitCommandes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_produits_selectionnes)
-        val produits_selcte: RecyclerView = findViewById(R.id.produit_commande)
-        produits_selcte.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        val numCommande = intent.extras?.getInt("numerota3lacommande")
-        val con: CrearConexionMySQL = CrearConexionMySQL(this)
+        setContentView(R.layout.activity_liste_produit_commandes)
+        val produits_selcte: RecyclerView = findViewById(R.id.liste_produit_commande)
+        produits_selcte.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        val numCommande = intent.extras?.getInt("numcommandeLivreur")
+        val con = CrearConexionMySQL(this)
         val detail_commande =
             con.cnx("SELECT * FROM `commande` WHERE `num_commande` = $numCommande")
         detail_commande?.next()
@@ -30,7 +32,6 @@ class produits_selectionnes : AppCompatActivity() {
         detail_client!!.next()
         val produit_commande =
             con.cnx("SELECT * FROM `commander` WHERE `num_commande` = $numCommande")
-
         val liste_produit_commande = ArrayList<modelItemCommande>()
         do {
             produit_commande?.next()
@@ -49,17 +50,8 @@ class produits_selectionnes : AppCompatActivity() {
         } while (produit_commande!!.isLast == false)
         produits_selcte.adapter = AddapterProduitsSlectionne(liste_produit_commande)
 
-
-        val ajouterProduit: FloatingActionButton = findViewById(R.id.add_product)
-        ajouterProduit.setOnClickListener {
-            val ajouterPro = Intent(this, select_products::class.java)
-            ajouterPro.putExtra("categorie",detail_client.getString("nom_categorie"))
-            ajouterPro.putExtra("num_commande",numCommande)
-            startActivity(ajouterPro)
-        }
-        val valide: FloatingActionButton = findViewById(R.id.valide)
+        val valide: FloatingActionButton = findViewById(R.id.valide_versement)
         valide.setOnClickListener {
-            Toast.makeText(this, "cv1", Toast.LENGTH_SHORT).show()
 
             var totale_commande = 0.0
             var i = 0
@@ -67,28 +59,30 @@ class produits_selectionnes : AppCompatActivity() {
                 totale_commande = totale_commande + liste_produit_commande[i].total
                 i = i + 1
             }
-            Toast.makeText(this, "cv2", Toast.LENGTH_SHORT).show()
 
             val builder = AlertDialog.Builder(this)
-            Toast.makeText(this, "cv3", Toast.LENGTH_SHORT).show()
-
+            val Inflater: LayoutInflater = LayoutInflater.from(this)
+            val dialogLayout = Inflater.inflate(R.layout.versement, null)
+            val Versemnt = dialogLayout.findViewById<EditText>(R.id.versement_commandes)
+            var versement: String? = null
             with(builder) {
-                setTitle("total:$totale_commande")
+                setTitle("enter versement")
+                setMessage("total commande : $totale_commande")
                 setPositiveButton("ok") { dialog, wich ->
-                    val Intent_consulter_commande: Intent =
-                        Intent(builder.context, consulter_commandes::class.java)
-                    startActivity(Intent_consulter_commande)
-                    con.extnoquery("UPDATE `commande` SET `total` = '$totale_commande' WHERE `commande`.`num_commande` = $numCommande;")
-                    val newCredit=detail_client.getDouble("credit")+totale_commande
+                    versement = Versemnt.text.toString()
+                    val sdf = SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
+                    val currentDate = sdf.format(Date())
+                    val date=currentDate.toString()
+                    val con = CrearConexionMySQL(this@ListeProduitCommandes)
+                    con.extnoquery("UPDATE `commande` SET `date_livre` = '$date', `versement` = '$versement' WHERE `commande`.`num_commande` = $numCommande;")
+                    val newCredit=detail_client.getDouble("credit")- versement!!.toDouble()
                     con.extnoquery("UPDATE `client` SET `credit` = '$newCredit' WHERE `client`.`id_client` = ${detail_commande!!.getInt("id_client")};\n")
-
                 }
                 setNegativeButton("cancel") { dialog, wich ->
                 }
+                setView(dialogLayout)
                 show()
             }
-        }
-
+            Toast.makeText(this, "cv4", Toast.LENGTH_SHORT).show()
     }
-
-}
+}}

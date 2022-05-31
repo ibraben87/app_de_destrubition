@@ -41,6 +41,9 @@ class login : AppCompatActivity() {
             resu?.last()
             if (resu?.row != 0) {
                 val Liv = Intent(this, MainActivity_Livreur::class.java)
+                Toast.makeText(this,"liste commandes3 liv id ", Toast.LENGTH_SHORT).show()
+
+                Liv.putExtra("numLiv", resu!!.getInt("id_livreur"))
                 startActivity(Liv)
             } else {
                 Toast.makeText(this, "try again", Toast.LENGTH_SHORT).show()

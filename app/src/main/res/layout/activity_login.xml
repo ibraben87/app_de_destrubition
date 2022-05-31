@@ -41,8 +41,11 @@
             android:text="conxion"
             android:textSize="28dp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="124dp"
-            tools:layout_editor_absoluteY="426dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="426dp"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

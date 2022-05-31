@@ -33,7 +33,6 @@ class List_vendeur_livreur : AppCompatActivity() {
                 res!!.next()
                 val ven_liv=modelVenLiv(res.getString("nom_livreur"),res.getString("mdp_livreur"),res.getString("login_livreur"),res.getString("prenom_livreur"))
                 liv_ven.add(ven_liv)
-
             }while (res!!.isLast==false)
         }else{
             Toast.makeText(this,"il ya un problem",Toast.LENGTH_LONG).show()

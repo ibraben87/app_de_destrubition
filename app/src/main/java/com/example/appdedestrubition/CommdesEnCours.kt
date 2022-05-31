@@ -6,21 +6,22 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appdedestrubition.addpters.AdapterCommandesEnCours
+import com.example.appdedestrubition.addpters.AdapterConsulterCommande
 import com.example.appdedestrubition.model.modelConsCommande
 import java.sql.ResultSet
 
-class CommandesDistribuees : AppCompatActivity() {
+class CommdesEnCours : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_commandes_distribuees)
-        val con_commande: RecyclerView = findViewById(R.id.liste_commande_distribuees)
+        setContentView(R.layout.activity_commdes_en_cours)
+        val con_commande: RecyclerView = findViewById(R.id.liste_commande_encours)
         val commandes = ArrayList<modelConsCommande>()
 
         val con = CrearConexionMySQL(this)
 
-        val num_liv=intent.extras!!.getInt("num_livreur_detr")
+        val num_liv=intent.extras!!.getInt("num_livreur")
 
-        val res: ResultSet? = con.cnx("SELECT * FROM `commande` WHERE `id_livreur` = $num_liv AND `versement` != 0")
+        val res: ResultSet? = con.cnx("SELECT * FROM `commande` WHERE `id_livreur` = $num_liv AND `versement` = 0")
 
 
         do {

@@ -4,29 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".List_de_produits"
-    android:background="@drawable/back_ground"
-    >
+    tools:context=".ListeProduitCommandes">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listView_produit"
+        android:id="@+id/liste_produit_commande"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/ajouter_prodtuit"
+        android:id="@+id/valide_versement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
-        app:srcCompat="@drawable/ic_plus"
+        app:srcCompat="@drawable/ic_valide"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

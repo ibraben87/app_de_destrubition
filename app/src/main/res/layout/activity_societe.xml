@@ -51,6 +51,8 @@
         android:textColor="#bdd7e2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="580dp"
         tools:layout_editor_absoluteY="580dp"
         />
 
@@ -64,7 +66,9 @@
         android:textColor="#1C1061"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="146dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="146dp"
+        />
 
     <Button
         android:id="@+id/liste_produit"
@@ -77,6 +81,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="322dp"
         tools:layout_editor_absoluteY="322dp" />
 
     <Button
@@ -90,7 +96,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.935"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="322dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="322dp"
+        />
 
     <Button
         android:id="@+id/liste_vendeur"
@@ -103,7 +111,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="415dp"
+        />
 
     <Button
         android:id="@+id/liste_livreur"
@@ -116,7 +126,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.935"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="415dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

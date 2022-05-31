@@ -39,9 +39,9 @@ class CrearConexionMySQL(context: Context) {
             Class.forName("com.mysql.jdbc.Driver")
             connection = DriverManager.getConnection(strConnectionMySQLWeb,userMySQL,passwordMySQL)
             if (connection!=null){
-                Toast.makeText(con,"ro7 dir dodo ro7",Toast.LENGTH_SHORT).show()
+                Toast.makeText(con,"vouss etes connectee aux bdd avec seccsus",Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(con,"yes we have problem here",Toast.LENGTH_SHORT).show()
+                Toast.makeText(con,"no connexion",Toast.LENGTH_SHORT).show()
             }
         }catch (e:SQLException){
             Toast.makeText(context,e.toString(),Toast.LENGTH_SHORT).show()

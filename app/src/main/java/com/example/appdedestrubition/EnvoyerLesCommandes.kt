@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appdedestrubition.addpters.AdapterConsulterCommande
+import com.example.appdedestrubition.addpters.AdapterEnvoyerCommandes
 import com.example.appdedestrubition.model.modelConsCommande
 import java.sql.ResultSet
 
@@ -24,11 +25,13 @@ class EnvoyerLesCommandes : AppCompatActivity() {
             if (res!!.getDouble("total")!=0.0){
                 val nom_client: ResultSet? =con.cnx("SELECT * FROM `client` WHERE `id_client` = ${res!!.getInt("id_client")}")
                 nom_client!!.last()
-                val model= modelConsCommande(res.getInt("num_commande"),nom_client.getString("nom_client"),res.getDouble("total") )
-                commandes.add(model)
+                if (res.getInt("id_livreur")==0) {
+                    val model= modelConsCommande(res.getInt("num_commande"),nom_client.getString("nom_client"),res.getDouble("total") )
+                    commandes.add(model)
+                }
             }
         }while (res?.isLast == false)
         con_commande.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
-        con_commande.adapter= AdapterConsulterCommande(commandes)
+        con_commande.adapter= AdapterEnvoyerCommandes(commandes)
     }
 }

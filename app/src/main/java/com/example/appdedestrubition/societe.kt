@@ -49,6 +49,12 @@ class societe : AppCompatActivity() {
             IntentLivVen.putExtra("type","livreur")
             startActivity(IntentLivVen)
         }
+        val envoyer_commande:Button=findViewById(R.id.envoyer_commandes)
+        envoyer_commande.setOnClickListener {
+            val new = Intent(this, EnvoyerLesCommandes::class.java)
+            startActivity(new)
+
+        }
 
     }
 

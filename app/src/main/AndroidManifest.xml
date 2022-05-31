@@ -13,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDeDestrubition">
         <activity
+            android:name=".ListeProduitCommandes"
+            android:exported="false" />
+        <activity
+            android:name=".CommandesDistribuees"
+            android:exported="false" />
+        <activity
+            android:name=".CommdesEnCours"
+            android:exported="false" />
+        <activity
+            android:name=".Liste_Livreur_livree"
+            android:exported="false" />
+        <activity
             android:name=".EnvoyerLesCommandes"
             android:exported="false" />
         <activity

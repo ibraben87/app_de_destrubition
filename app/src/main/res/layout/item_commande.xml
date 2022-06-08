@@ -10,13 +10,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="82dp">
 
         <TextView
             android:id="@+id/num_commande1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
             android:text="Nu"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,27 +28,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="28dp"
             android:text="nom client"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/num_commande1"
             app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/etat_commande"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
             android:text="etat commnde"
-            app:layout_constraintEnd_toStartOf="@id/total_comande1"
-            app:layout_constraintStart_toEndOf="@id/nom_client1"
-            app:layout_constraintTop_toTopOf="parent"
             android:textSize="20sp"
-            android:layout_marginTop="5dp"/>
+            app:layout_constraintEnd_toStartOf="@id/total_comande1"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toEndOf="@id/nom_client1"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/total_comande1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="4dp"
             android:text="total 1125"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"

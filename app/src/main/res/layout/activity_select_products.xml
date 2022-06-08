@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".List_de_produits"
-    android:background="@drawable/back_ground"
+    android:background="@drawable/back_grdd"
     >
 
     <com.google.android.material.appbar.AppBarLayout
@@ -25,6 +25,7 @@
             app:menu="@menu/top_bar"
             app:navigationIcon="@drawable/more_icon"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:backgroundTint="@color/purple_700"
             />
 
     </com.google.android.material.appbar.AppBarLayout>

@@ -4,9 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommdesEnCours">
+    tools:context=".CommdesEnCours"
+    android:background="@drawable/back_grdd"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="32dp"
+
         android:id="@+id/liste_commande_encours"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,4 +18,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liste commandes en cours"
+        android:textColor="#F4E0E0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

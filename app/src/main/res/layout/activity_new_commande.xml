@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".new_commande"
     android:orientation="horizontal"
-    android:background="@drawable/back_ground"
+    android:background="@drawable/back_grdd"
     >
 
     <TextView

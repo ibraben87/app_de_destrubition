@@ -5,7 +5,9 @@
     android:id="@+id/My_recycler_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".livreur_3rd_interface">
+    tools:context=".livreur_3rd_interface"
+    android:background="@drawable/back_grdd"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/my_recycler_view"

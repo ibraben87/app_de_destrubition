@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EnvoyerLesCommandes"
-    android:background="@drawable/back_ground"
+    android:background="@drawable/back_grdd"
     >
 
     <androidx.recyclerview.widget.RecyclerView

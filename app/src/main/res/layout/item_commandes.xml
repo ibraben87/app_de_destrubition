@@ -11,13 +11,14 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="80dp">
 
             <TextView
                 android:id="@+id/num_commande"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
                 android:text="N°"
                 android:textSize="25dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +28,8 @@
                 android:id="@+id/nom_client"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="20dp"
                 android:text="Nom client"
                 android:textSize="25dp"
                 app:layout_constraintStart_toEndOf="@id/num_commande"
@@ -38,7 +39,8 @@
                 android:id="@+id/total"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="48dp"
                 android:text="Total:"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"

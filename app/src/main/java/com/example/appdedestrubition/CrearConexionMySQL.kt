@@ -12,8 +12,8 @@ import java.sql.SQLException
 
 class CrearConexionMySQL(context: Context) {
     val con=context
-    private val userMySQL = "sql11497936"
-    private val passwordMySQL:String = "rsf8K9xCXr"
+    private val userMySQL = "ibra"
+    private val passwordMySQL:String = "ibra2002"
     private val hostweb = "sql11.freesqldatabase.com"
 //    private val userMySQL = "a8781d_ibrahi"
 //    private val passwordMySQL:String = "r43g@R22P@_ZdHx"
@@ -26,8 +26,8 @@ class CrearConexionMySQL(context: Context) {
 
     //private final String urlGetDBParameters = "zeroDateTimeBehavior=convertToNull&profileSQL=true&useSSL=false";
     //private final String strConnectionMySQLLocal = "jdbc:mysql://127.0.0.1:3306/" + dbName + "?autoReconnect=true&useSSL=false";
-    private var strConnectionMySQLLocal = "jdbc:mysql://192.168.43.7:3306/miniprojet?autoReconnect=true&useSSL=false"
-    private val strConnectionMySQLWeb = "jdbc:mysql://$hostweb:$port/$dbName?autoReconnect=true&useSSL=false"
+    private var strConnectionMySQLLocal = "jdbc:mysql://192.168.1.41:3306/bdd_presentation?autoReconnect=true&useSSL=false"
+    private val strConnectionMySQLWeb = "jdbc:mysql://$hostweb:$port/$dbName"
     private val driverClassName = "com.mysql.jdbc.Driver"
     var connection: Connection? = null
 
@@ -37,7 +37,7 @@ class CrearConexionMySQL(context: Context) {
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
             Class.forName("com.mysql.jdbc.Driver")
-            connection = DriverManager.getConnection(strConnectionMySQLWeb,userMySQL,passwordMySQL)
+            connection = DriverManager.getConnection(strConnectionMySQLLocal,userMySQL,passwordMySQL)
             if (connection!=null){
                 Toast.makeText(con,"vouss etes connectee aux bdd avec seccsus",Toast.LENGTH_SHORT).show()
             }else{

@@ -1,5 +1,6 @@
 package com.example.appdedestrubition
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ class new_client : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_client)
+        val idVendeur= intent.extras!!.getInt("idVendeur")
         val nom: EditText = findViewById(R.id.nom)
         val prenom: EditText = findViewById(R.id.prenom)
         val localisation: EditText = findViewById(R.id.addresse)
@@ -42,6 +44,9 @@ class new_client : AppCompatActivity() {
                 Toast.makeText(this, "svp choisi une categorie", Toast.LENGTH_SHORT).show()
             } else {
                 con.extnoquery("INSERT INTO `client` (`id_client`, `nom_client`, `prenom_client`, `credit`, `localisation`, `Num`, `nom_categorie`) VALUES (NULL, '${nom.text}', '${prenom.text}', '${credit.text}', '${localisation.text}', '${phone.text}', '$categorie');")
+                val intentvendeur=Intent(this,Vendeur::class.java)
+                    intentvendeur.putExtra("id_vendeur", idVendeur)
+                startActivity(intentvendeur)
             }
         }
     }

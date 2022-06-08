@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/back_ground"
+    android:background="@drawable/back_grdd"
     >
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="32dp"
+
         android:id="@+id/recyclerView"
         android:layout_width="407dp"
         android:layout_height="495dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
 
-        android:text="envoyer les com"
+        android:text="envoyer"
         android:backgroundTint="#C57791"
         android:textSize="28dp"
         android:textStyle="bold"
@@ -33,4 +34,15 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Envoyer les commandes "
+        android:textColor="#F4E0E0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

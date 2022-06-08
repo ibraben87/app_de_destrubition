@@ -4,13 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Liste_Livreur_livree">
+    tools:context=".Liste_Livreur_livree"
+    android:background="@drawable/back_grdd"
+    >
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="32dp"
+
         android:id="@+id/listView_liv_livree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liste livreurs "
+        android:textColor="#F4E0E0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

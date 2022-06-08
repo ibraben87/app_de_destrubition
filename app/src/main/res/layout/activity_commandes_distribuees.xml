@@ -4,13 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CommandesDistribuees">
+    tools:context=".CommandesDistribuees"
+    android:background="@drawable/back_grdd"
+    >
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/liste_commande_distribuees"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liste commandes "
+        android:textColor="#F4E0E0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

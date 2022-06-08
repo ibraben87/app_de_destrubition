@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/back_grd2">
+    android:background="@drawable/back_grd2"
+    >
 
 
     <Button
@@ -24,6 +25,7 @@
 
     <Button
         android:id="@+id/vendeur"
+        android:pointerIcon="@dr"
         android:layout_width="174dp"
         android:layout_height="79dp"
         android:layout_marginTop="50dp"
@@ -40,13 +42,14 @@
         android:layout_width="174dp"
         android:layout_height="79dp"
         android:layout_marginTop="50dp"
+        android:drawableBottom="android:@drawable/back_grd2"
         android:text="@string/societe"
         android:backgroundTint="#4008A3"
         android:textStyle="bold"
         android:textColor="#98EBF6"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@id/livreur"
-        app:layout_constraintTop_toBottomOf="@id/vendeur"/>
+        app:layout_constraintTop_toBottomOf="@id/vendeur"
 
     <ImageView
         android:id="@+id/imageView8"
@@ -75,9 +78,7 @@
         android:layout_width="57dp"
         android:layout_height="58dp"
         app:srcCompat="@drawable/icons8_transport_logistique_de_livraison_cargo_colis_bus_service_27_64"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="61dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="200dp"
-         />
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="200dp" />"
+    />
 </androidx.constraintlayout.widget.ConstraintLayout>

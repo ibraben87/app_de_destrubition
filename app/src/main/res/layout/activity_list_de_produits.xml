@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".List_de_produits"
-    android:background="@drawable/back_ground"
+    android:background="@drawable/back_grdd"
     >
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="32dp"
+
         android:id="@+id/listView_produit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,6 +29,16 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liste produits "
+        android:textColor="#F4E0E0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="106dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

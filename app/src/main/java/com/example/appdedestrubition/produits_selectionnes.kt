@@ -78,7 +78,7 @@ class produits_selectionnes : AppCompatActivity() {
                     val Intent_consulter_commande: Intent =
                         Intent(builder.context, consulter_commandes::class.java)
                     startActivity(Intent_consulter_commande)
-                    con.extnoquery("UPDATE `commande` SET `total` = '$totale_commande' WHERE `commande`.`num_commande` = $numCommande;")
+                    con.extnoquery("UPDATE `commande` SET `etat_commande` = 'en cour', `total` = '$totale_commande' WHERE `commande`.`num_commande` = $numCommande;")
                     val newCredit=detail_client.getDouble("credit")+totale_commande
                     con.extnoquery("UPDATE `client` SET `credit` = '$newCredit' WHERE `client`.`id_client` = ${detail_commande!!.getInt("id_client")};\n")
 

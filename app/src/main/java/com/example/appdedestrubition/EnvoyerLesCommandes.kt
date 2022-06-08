@@ -20,17 +20,32 @@ class EnvoyerLesCommandes : AppCompatActivity() {
         val commandes=ArrayList<modelConsCommande>()
         val con=CrearConexionMySQL(this)
         val res: ResultSet? = con.cnx("SELECT * FROM `commande`")
+        Toast.makeText(this,"liste commandes2", Toast.LENGTH_SHORT).show()
+        var etat=""
         do {
             res?.next()
             if (res!!.getDouble("total")!=0.0){
+                Toast.makeText(this,"liste commandes3", Toast.LENGTH_SHORT).show()
+
                 val nom_client: ResultSet? =con.cnx("SELECT * FROM `client` WHERE `id_client` = ${res!!.getInt("id_client")}")
                 nom_client!!.last()
                 if (res.getInt("id_livreur")==0) {
-                    val model= modelConsCommande(res.getInt("num_commande"),nom_client.getString("nom_client"),res.getDouble("total") )
+                    Toast.makeText(this,"liste commandes3", Toast.LENGTH_SHORT).show()
+                    if (res.getString("etat_commande")==null)
+                    {
+                        etat=""
+                    }else{
+                        etat=res.getString("etat_commande")
+                    }
+                    val model= modelConsCommande(res.getInt("num_commande"),nom_client.getString("nom_client"),res.getDouble("total"),etat )
                     commandes.add(model)
                 }
+                Toast.makeText(this,"liste commandes4", Toast.LENGTH_SHORT).show()
+
             }
         }while (res?.isLast == false)
+        Toast.makeText(this,"liste commandesfin", Toast.LENGTH_SHORT).show()
+
         con_commande.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         con_commande.adapter= AdapterEnvoyerCommandes(commandes)
     }

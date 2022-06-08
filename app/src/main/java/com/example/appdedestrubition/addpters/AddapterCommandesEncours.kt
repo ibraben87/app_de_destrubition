@@ -14,6 +14,7 @@ class AddapterCommandesEncours(val commandesEncours: ArrayList<modelCommandesEnc
         val nomCli:TextView=itemView.findViewById(R.id.nom_client1)
         val total:TextView=itemView.findViewById(R.id.total_comande1)
 
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

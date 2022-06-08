@@ -60,7 +60,7 @@ class new_commande : AppCompatActivity() {
             var rse = con.cnx("SELECT * FROM `client` WHERE `nom_client` LIKE '$nom_client'")
             rse?.next()
             val  categorie= rse!!.getString("nom_categorie")
-            con.extnoquery("INSERT INTO `commande` (`num_commande`, `date_commande`, `date_livre`, `total`, `id_client`, `id_vendeur`, `id_livreur`, `versement`) VALUES (NULL, '$date', '', '', '${rse.getInt("id_client")}', '$idVendeur', NULL, '');")
+            con.extnoquery("INSERT INTO `commande` (`num_commande`, `date_commande`, `date_livre`, `etat_commande`, `total`, `id_client`, `id_vendeur`, `id_livreur`, `versement`) VALUES (NULL, '$date', '', NULL, '', '${rse.getInt("id_client")}', '$idVendeur', NULL, '');")
             rse=con.cnx("SELECT * FROM `commande` WHERE `date_commande` = '$date'")
             rse!!.next()
             val Intent_prd = Intent(this, select_products::class.java)

@@ -50,6 +50,8 @@ class AdapterCommandesEnCours(
         val numCom = itemView.findViewById<TextView>(R.id.num_commande1)
         val nomClient = itemView.findViewById<TextView>(R.id.nom_client1)
         val total1 = itemView.findViewById<TextView>(R.id.total_comande1)
+        val etat=itemView.findViewById<TextView>(R.id.etat_commande)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -66,6 +68,8 @@ class AdapterCommandesEnCours(
         holder.nomClient.text = data.nom_client
         holder.numCom.text = data.num_commande.toString()
         holder.total1.text = data.total.toString()
+        holder.etat.text=data.etat_commade
+
         holder.com_selc = data
     }
 }

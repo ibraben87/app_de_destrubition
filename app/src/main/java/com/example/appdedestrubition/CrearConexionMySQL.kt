@@ -12,8 +12,8 @@ import java.sql.SQLException
 
 class CrearConexionMySQL(context: Context) {
     val con=context
-    private val userMySQL = "sql11495453"
-    private val passwordMySQL:String = "YGQrKk9YMJ"
+    private val userMySQL = "sql11497936"
+    private val passwordMySQL:String = "rsf8K9xCXr"
     private val hostweb = "sql11.freesqldatabase.com"
 //    private val userMySQL = "a8781d_ibrahi"
 //    private val passwordMySQL:String = "r43g@R22P@_ZdHx"
@@ -21,7 +21,7 @@ class CrearConexionMySQL(context: Context) {
     private val host = "192.168.1.37"
     private val port = "3306"
     //private val dbName = "db_a8781d_ibrahi"
-    private val dbName = "sql11495453"
+    private val dbName = "sql11497936"
 
 
     //private final String urlGetDBParameters = "zeroDateTimeBehavior=convertToNull&profileSQL=true&useSSL=false";

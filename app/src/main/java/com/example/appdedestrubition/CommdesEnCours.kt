@@ -22,7 +22,7 @@ class CommdesEnCours : AppCompatActivity() {
         val num_liv=intent.extras!!.getInt("num_livreur")
 
         val res: ResultSet? = con.cnx("SELECT * FROM `commande` WHERE `id_livreur` = $num_liv AND `versement` = 0")
-
+        var etat=""
 
         do {
             res?.next()
@@ -33,7 +33,13 @@ class CommdesEnCours : AppCompatActivity() {
             val nom_client: ResultSet? = con.cnx("SELECT * FROM `client` WHERE `id_client` = ${res!!.getInt("id_client")}")
 
             nom_client!!.last()
-            val model = modelConsCommande(res.getInt("num_commande"), nom_client.getString("nom_client"), res.getDouble("total"))
+            if (res.getString("etat_commande")==null)
+            {
+                etat=""
+            }else{
+                etat=res.getString("etat_commande")
+            }
+            val model = modelConsCommande(res.getInt("num_commande"), nom_client.getString("nom_client"), res.getDouble("total"),etat)
 
             commandes.add(model)
 

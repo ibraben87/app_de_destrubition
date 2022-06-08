@@ -74,9 +74,10 @@ class ListeProduitCommandes : AppCompatActivity() {
                     val currentDate = sdf.format(Date())
                     val date=currentDate.toString()
                     val con = CrearConexionMySQL(this@ListeProduitCommandes)
-                    con.extnoquery("UPDATE `commande` SET `date_livre` = '$date', `versement` = '$versement' WHERE `commande`.`num_commande` = $numCommande;")
+                    con.extnoquery("UPDATE `commande` SET `date_livre` = '$date', `etat_commande` = 'destribue', `versement` = '$versement' WHERE `commande`.`num_commande` = $numCommande;")
                     val newCredit=detail_client.getDouble("credit")- versement!!.toDouble()
-                    con.extnoquery("UPDATE `client` SET `credit` = '$newCredit' WHERE `client`.`id_client` = ${detail_commande!!.getInt("id_client")};\n")
+                    con.extnoquery("UPDATE `client` SET `credit` = '$newCredit' WHERE `client`.`id_client` = ${detail_commande!!.getInt("id_client")};")
+
                 }
                 setNegativeButton("cancel") { dialog, wich ->
                 }

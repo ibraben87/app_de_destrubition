@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="35dp"
-    android:layout_marginEnd="35dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
     android:layout_marginTop="5dp">
 
 
@@ -32,7 +32,16 @@
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/num_commande1"
             app:layout_constraintTop_toTopOf="parent" />
-
+        <TextView
+            android:id="@+id/etat_commande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="etat commnde"
+            app:layout_constraintEnd_toStartOf="@id/total_comande1"
+            app:layout_constraintStart_toEndOf="@id/nom_client1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"/>
         <TextView
             android:id="@+id/total_comande1"
             android:layout_width="wrap_content"

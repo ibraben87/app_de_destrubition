@@ -19,8 +19,8 @@ class AdapterLivreur (val listVenLiv:ArrayList<modelVenLiv>,val numCommande:Int?
                     val con=CrearConexionMySQL(itemView.context)
                     val res=con.cnx("SELECT * FROM `livreur` WHERE `login_livreur` LIKE '${livreur!!.login_livreur}' AND `mdp_livreur` LIKE '${livreur!!.MDP_livreur}'")
                     res!!.next()
-                    con.extnoquery("UPDATE `commande` SET `id_livreur` = '${res.getInt("id_livreur")}' WHERE `commande`.`num_commande` = $numCommande;")
-
+                    con.extnoquery("UPDATE `commande` SET `etat_commande` = 'en attent', `id_livreur` = '${res.getInt("id_livreur")}' WHERE `commande`.`num_commande` = $numCommande;")
+                    "UPDATE `commande` SET `etat_commande` = 'en attent', `id_livreur` = '${res.getInt("id_livreur")}' WHERE `commande`.`num_commande` = $numCommande;"
                     itemView.context.startActivity(Intent(itemView.context,EnvoyerLesCommandes::class.java))
                 }
             }

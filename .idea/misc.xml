@@ -17,6 +17,7 @@
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout-v21/activity_new_acount.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout-w1240dp/activity_login2.xml" value="0.16331994645247658" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout-w936dp/activity_login2.xml" value="0.18510928961748635" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_ajouter_produit.xml" value="0.23052536231884058" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_consulter_commandes.xml" value="0.264" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_login.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/activity_login2.xml" value="0.24547101449275363" />
@@ -31,6 +32,13 @@
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/cardview.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/commandes.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/item_commande.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/item_commandes.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/item_prodect.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/item_produit.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/item_ven_liv.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/row_checkbox.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/row_values.xml" value="0.24547101449275363" />
+        <entry key="..\:/Users/ibrah/StudioProjects/app_de_destrubition/app/src/main/res/layout/versement.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/user/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_ajouter_produit.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/user/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_commandes_distribuees.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/user/AndroidStudioProjects/app_de_destrubition/app/src/main/res/layout/activity_commandes_en_cours.xml" value="0.25416666666666665" />

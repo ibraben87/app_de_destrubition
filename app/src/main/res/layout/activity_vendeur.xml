@@ -13,7 +13,7 @@
         android:layout_width="150dp"
         android:layout_height="65dp"
         android:backgroundTint="#F2DAC2D2"
-        android:text="new comande"
+        android:text="Nouvelle commande"
         android:textColor="#1C1061"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +43,7 @@
         android:layout_width="150dp"
         android:layout_height="65dp"
         android:backgroundTint="#F2DAC2D2"
-        android:text="new client"
+        android:text="Nouveau client"
         android:textColor="#1C1061"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,7 +58,7 @@
         android:layout_width="150dp"
         android:layout_height="65dp"
         android:backgroundTint="#F2DAC2D2"
-        android:text="Liste Produits"
+        android:text="Liste des produits"
         android:textColor="#1C1061"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
         android:layout_width="150dp"
         android:layout_height="65dp"
         android:backgroundTint="#F2DAC2D2"
-        android:text="Liste Clients"
+        android:text="Liste des clients"
         android:textColor="#1C1061"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -96,19 +96,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="50dp"
-        android:layout_height="49dp"
-        app:srcCompat="@drawable/icons8_r_seau_d__39_affaires_50"
-        tools:layout_editor_absoluteX="6dp"
-        tools:layout_editor_absoluteY="29dp" />
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icons8_r_seau_d__39_affaires_50__1_"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="28dp" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="50dp"
-        android:layout_height="49dp"
-        app:srcCompat="@drawable/icons8_r_seau_d__39_affaires_50"
-        tools:layout_editor_absoluteX="359dp"
-        tools:layout_editor_absoluteY="29dp" />
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icons8_r_seau_d__39_affaires_50__1_"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="28dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

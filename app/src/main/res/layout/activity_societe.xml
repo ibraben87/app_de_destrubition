@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="236dp"
         android:backgroundTint="#F2DAC2D2"
-        android:text="consulter commande"
+        android:text="Consulter la commande"
         android:textColor="#1C1061"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,13 +42,14 @@
 
     <Button
         android:id="@+id/envoyer_commandes"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:layout_height="90dp"
         android:textStyle="bold"
-
         android:backgroundTint="#C57791"
         android:text="envoyer les commandes"
+        android:textSize="20dp"
         android:textColor="#bdd7e2"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -58,11 +59,11 @@
 
     <Button
         android:id="@+id/new_acount"
-        android:layout_width="175dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#F2DAC2D2"
         android:textStyle="bold"
-        android:text="new acount"
+        android:text="Nouveau compte"
         android:textColor="#1C1061"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -105,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#F2DAC2D2"
-        android:text="liste des vendeur"
+        android:text="liste des vendeurs"
         android:textColor="#1C1061"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,7 +122,7 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:backgroundTint="#F2DAC2D2"
-        android:text="liste des livreur"
+        android:text="liste des livreurs"
         android:textColor="#1C1061"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.935"
@@ -131,20 +132,20 @@
         />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="50dp"
-        android:layout_height="49dp"
-        app:srcCompat="@drawable/icons8_soci_t__50__1_"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="30dp" />
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icons8_soci_t__50__2_"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="29dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="50dp"
-        android:layout_height="49dp"
-        app:srcCompat="@drawable/icons8_soci_t__50__1_"
-        tools:layout_editor_absoluteX="336dp"
-        tools:layout_editor_absoluteY="30dp" />
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/icons8_soci_t__50__2_"
+        tools:layout_editor_absoluteX="345dp"
+        tools:layout_editor_absoluteY="29dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

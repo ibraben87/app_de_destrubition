@@ -19,10 +19,9 @@ class Vendeur : AppCompatActivity() {
         val btn_new_client  =findViewById<Button>(R.id.new_client)
         btn_new_client.setOnClickListener {
             val intent_new_client= Intent(this,new_client::class.java)
+            intent_new_client.putExtra("idVendeur",idven)
             startActivity(intent_new_client)
         }
-
-
         val btn_list_client:Button=findViewById(R.id.btn_liste_client)
         val btn_list_pro:Button=findViewById(R.id.btn_liste_pro)
         val btn_consult_com:Button=findViewById(R.id.btn_cosult_com)
@@ -38,13 +37,6 @@ class Vendeur : AppCompatActivity() {
             val Intent_consult:Intent=Intent(this,consulter_commandes::class.java)
             startActivity(Intent_consult)
         }
-
-
-
-
-
-
-
     }
 }
 
